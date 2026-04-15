@@ -5,6 +5,8 @@ import { useLoaderData, useParams } from "react-router";
 import callImg from "../../assets/call.png";
 import textImg from "../../assets/text.png";
 import videoImg from "../../assets/video.png";
+import { useContext } from "react";
+import { FriendContext } from "../../context/FriendContext";
 
 const FriendDetails = () => {
   const { id } = useParams();
@@ -14,7 +16,7 @@ const FriendDetails = () => {
   //   console.log(friends, "friends");
 
   const expectedFriend = friends.find((friend) => friend.id === Number(id));
-  console.log(expectedFriend, "expectedFriend");
+  // console.log(expectedFriend, "expectedFriend");
 
   const nextDue = new Date(expectedFriend.next_due_date).toLocaleDateString(
     "en-US",
@@ -25,10 +27,13 @@ const FriendDetails = () => {
     },
   );
 
+  const {handleCall, handleText, handleVideo} = useContext(FriendContext);
+  console.log(handleCall, "friendContext");
+
   return (
     <div className="bg-[#F8FAFC] py-20">
       <div className="w-9/12 mx-auto flex gap-6">
-        {/* Left column */}
+        
         <div className="flex flex-col gap-4 w-87.5">
           {/* Profile card */}
           <div className="bg-[#FFFFFF] rounded-lg shadow-md p-6 flex flex-col items-center gap-2 text-center">
@@ -82,11 +87,9 @@ const FriendDetails = () => {
             Delete
           </div>
         </div>
-        {/* ← end left column */}
-
-        {/* Right column */}
+        
         <div className="flex flex-col gap-6 flex-1">
-          {/* Stat cards */}
+          
           <div className="grid grid-cols-3 gap-6">
             <div className="bg-[#FFFFFF] rounded-lg shadow-md p-8 flex flex-col gap-2 text-center">
               <p className="text-3xl font-semibold text-[#244D3F]">
@@ -108,9 +111,7 @@ const FriendDetails = () => {
 
           <div className="bg-[#FFFFFF] rounded-lg shadow-md p-6 flex flex-col">
             <div className="flex justify-between items-center mb-4">
-              <p className="text-xl text-[#244D3F]">
-                Relationship goal
-              </p>
+              <p className="text-xl text-[#244D3F]">Relationship goal</p>
               <button className="btn bg-[#F8FAFC] text-sm text-[#1F2937]">
                 Edit
               </button>
@@ -124,26 +125,32 @@ const FriendDetails = () => {
           </div>
 
           <div className="bg-[#FFFFFF] rounded-lg shadow-md p-6">
-            <p className="text-xl text-[#244D3F] mb-5">
-              Quick check-in
-            </p>
+            <p className="text-xl text-[#244D3F] mb-5">Quick check-in</p>
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-[#F8FAFC] rounded-lg flex flex-col gap-2 justify-center items-center py-4">
+              <button
+                onClick={() => handleCall(expectedFriend)}
+                className="bg-[#F8FAFC] rounded-lg flex flex-col gap-2 justify-center items-center py-4 cursor-pointer"
+              >
                 <img className="w-8 h-8" src={callImg} alt="Call icon" />
                 <p className="text-lg">Call</p>
-              </div>
-              <div className="bg-[#F8FAFC] rounded-lg flex flex-col gap-2 justify-center items-center py-4">
+              </button>
+              <button
+                onClick={() => handleText(expectedFriend)}
+                className="bg-[#F8FAFC] rounded-lg flex flex-col gap-2 justify-center items-center py-4 cursor-pointer"
+              >
                 <img className="w-8 h-8" src={textImg} alt="Text icon" />
                 <p className="text-lg">Text</p>
-              </div>
-              <div className="bg-[#F8FAFC] rounded-lg flex flex-col gap-2 justify-center items-center py-4">
+              </button>
+              <button
+                onClick={() => handleVideo(expectedFriend)}
+                className="bg-[#F8FAFC] rounded-lg flex flex-col gap-2 justify-center items-center py-4 cursor-pointer"
+              >
                 <img className="w-8 h-8" src={videoImg} alt="Video icon" />
                 <p className="text-lg">Video</p>
-              </div>
+              </button>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
