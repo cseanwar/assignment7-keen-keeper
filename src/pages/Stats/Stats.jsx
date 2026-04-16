@@ -1,11 +1,75 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { Legend, Pie, PieChart, Tooltip } from "recharts";
+import { FriendContext } from "../../context/FriendContext";
 
 const Stats = () => {
-    return (
-        <div>
-            Stats
+  const { interactions } = useContext(FriendContext);
+
+  const data = [
+    {
+      name: "Call",
+      value: interactions.filter((inter) => inter.type === "call").length,
+      fill: "#244D3F",
+    },
+    {
+      name: "Text",
+      value: interactions.filter((inter) => inter.type === "text").length,
+      fill: "#7E35E1",
+    },
+    {
+      name: "Video",
+      value: interactions.filter((inter) => inter.type === "video").length,
+      fill: "#37A163",
+    },
+  ].filter((entry) => entry.value > 0);
+
+  const hasData = data.length > 0;
+
+  return (
+    <div className="bg-[#F8FAFC]">
+      <div className="w-9/12 mx-auto py-20">
+        <h2 className="font-bold text-5xl text-[#1F2937] mb-6">
+          Friendship Analytics
+        </h2>
+        <div className="bg-[#FFFFFF] p-8 rounded-lg shadow-sm">
+          <span className="text-left text-[#244D3F] text-xl">
+            By Interaction Type
+          </span>
+
+          {!hasData ? (
+            <p className="text-center text-[#64748B] font-bold text-2xl my-10">
+              No interactions yet. Start calling, texting or video calling your
+              friends!
+            </p>
+          ) : (
+            <PieChart
+              style={{
+                width: "100%",
+                maxWidth: "500px",
+                maxHeight: "80vh",
+                margin: "auto",
+                paddingBottom: "30px",
+                aspectRatio: 1,
+              }}
+              responsive
+            >
+              <Pie
+                data={data}
+                innerRadius="80%"
+                outerRadius="100%"
+                cornerRadius="50%"
+                paddingAngle={5}
+                dataKey="value"
+                isAnimationActive={true}
+              />
+              <Legend />
+              <Tooltip />
+            </PieChart>
+          )}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Stats;

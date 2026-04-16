@@ -12,13 +12,13 @@ const typeOfActions = {
 };
 
 const Timelines = () => {
-  const { actions } = useContext(FriendContext);
-  console.log(actions, "friendContext");
+  const { interactions } = useContext(FriendContext);
+  console.log(interactions, "friendContext");
 
   const [filter, setFilter] = useState("all");
 
   const filtered =
-    filter === "all" ? actions : actions.filter((act) => act.type === filter);
+    filter === "all" ? interactions : interactions.filter((act) => act.type === filter);
 
   const formatDate = (date) =>
     new Date(date).toLocaleDateString("en-US", {
@@ -57,7 +57,7 @@ const Timelines = () => {
         </div>
 
         {filtered.length === 0 ? (
-          <p className="bg-white rounded-lg hover:border hover:border-dashed hover:border-[#93C5FD] shadow-sm p-4 text-[#64748B] text-2xl font-bold">
+          <p className="bg-[#FFFFFF] rounded-lg hover:border hover:border-dashed hover:border-[#93C5FD] shadow-sm p-4 text-[#64748B] text-2xl font-bold text-center">
             You did not performed any actions yet.
           </p>
         ) : (
