@@ -5,7 +5,7 @@ import Friends from '../../components/homepage/Friends';
 const Homepage = () => {
     return (
         <div>
-            <Banner />
+            {/* <Banner /> */}
             <Friends />
         </div>
     );

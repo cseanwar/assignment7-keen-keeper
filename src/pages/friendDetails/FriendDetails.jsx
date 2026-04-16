@@ -34,9 +34,9 @@ const FriendDetails = () => {
     <div className="bg-[#F8FAFC] py-10 lg:py-20">
       <div className="w-11/12 lg:w-9/12 mx-auto flex flex-col lg:flex-row gap-6">
         
-        <div className="flex flex-col gap-4 w-full lg:w-87.5 shrink-0">
+        <div className="flex flex-col w-full lg:w-87.5 shrink-0">
           {/* Profile card */}
-          <div className="bg-[#FFFFFF] rounded-lg shadow-md p-6 flex flex-col items-center gap-2 text-center">
+          <div className="bg-[#FFFFFF] rounded-lg shadow-md p-6 flex flex-col items-center gap-2 text-center mb-4">
             <img
               src={expectedFriend.picture}
               alt={expectedFriend.name}
@@ -78,7 +78,7 @@ const FriendDetails = () => {
             <PiBellSimpleZBold />
             Snooze 2 weeks
           </div>
-          <div className="flex justify-center items-center gap-2 py-3 rounded-sm border border-[#E9E9E9] bg-[#FFFFFF] cursor-pointer">
+          <div className="flex justify-center items-center gap-2 py-3 rounded-sm border border-[#E9E9E9] bg-[#FFFFFF] cursor-pointer my-2">
             <FiArchive />
             Archive
           </div>
