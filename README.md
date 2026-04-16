@@ -4,7 +4,6 @@
 
 Friendkeeper is a personal relationship manager that helps you track and nurture your most meaningful friendships. Set goals for how often you want to connect, log interactions, and get reminded before you drift apart.
 
----
 
 ## 🛠 Technology Used
 
@@ -16,7 +15,6 @@ Friendkeeper is a personal relationship manager that helps you track and nurture
 - **React Toastify** — Toast notifications
 - **React Icons** — Icon library
 
----
 
 ## ✨ Key Features
 
@@ -29,7 +27,6 @@ Log a call, text, or video chat with a single tap. Every interaction is automati
 ### 3. Friendship Analytics
 A live pi chart breaks down your interactions by type (call, text, video) and updates in real time as you log new check-ins — giving you a clear picture of how you're connecting with the people in your life.
 
----
 
 ## 🚀 Getting Started
 
@@ -45,6 +42,3 @@ npm install
 npm run dev
 ```
 
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
-
----
