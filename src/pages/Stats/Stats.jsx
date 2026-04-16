@@ -27,17 +27,17 @@ const Stats = () => {
 
   return (
     <div className="bg-[#F8FAFC]">
-      <div className="w-9/12 mx-auto py-20">
-        <h2 className="font-bold text-5xl text-[#1F2937] mb-6">
+      <div className="w-11/12 lg:w-9/12 mx-auto py-10 lg:py-20">
+        <h2 className="font-bold text-3xl lg:text-5xl text-[#1F2937] mb-6">
           Friendship Analytics
         </h2>
-        <div className="bg-[#FFFFFF] p-8 rounded-lg shadow-sm">
-          <span className="text-left text-[#244D3F] text-xl">
+        <div className="bg-[#FFFFFF] p-5 lg:p-8 rounded-lg shadow-sm">
+          <span className="text-[#244D3F] text-base lg:text-xl">
             By Interaction Type
           </span>
 
           {!hasData ? (
-            <p className="text-center text-[#64748B] font-bold text-2xl my-10">
+            <p className="text-center text-[#64748B] font-bold text-lg lg:text-2xl my-10">
               No interactions yet. Start calling, texting or video calling your
               friends!
             </p>
@@ -48,6 +48,7 @@ const Stats = () => {
                 maxWidth: "500px",
                 maxHeight: "80vh",
                 margin: "auto",
+                paddingTop: "50px",
                 paddingBottom: "30px",
                 aspectRatio: 1,
               }}
