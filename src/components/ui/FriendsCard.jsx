@@ -31,7 +31,7 @@ const FriendsCard = ({ friend }) => {
                                     `}
           >
             {friend.status === "overdue" && "Overdue"}
-            {friend.status === "on-track" && "on-Track"}
+            {friend.status === "on-track" && "On-Track"}
             {friend.status === "almost due" && "Almost Due"}
           </div>
         )}
