@@ -43,7 +43,7 @@ const Navbar = () => {
             <span className="font-semibold">Stats</span>
           </NavLink>
         </div>
-        <div className="dropdown dropdown-bottom dropdown-end lg:hidden">
+        <div className="dropdown dropdown-bottom dropdown-end md:hidden lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
