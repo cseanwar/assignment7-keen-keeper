@@ -37,7 +37,7 @@ const Banner = ({ friends = [] }) => {
           <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl leading-tight">
             Friends to keep close in your life
           </h1>
-          <p className="text-sm md:text-base text-[#64748B] pt-3 pb-6 md:pt-4 md:pb-8 max-w-md md:max-w-lg">
+          <p className="text-sm md:text-base text-[#64748B] pt-3 pb-6 md:pt-4 md:pb-8">
             Your personal shelf of meaningful connections. Browse, tend, and
             nurture the <br /> relationships that matter most.
           </p>

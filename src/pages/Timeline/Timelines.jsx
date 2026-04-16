@@ -31,17 +31,17 @@ const Timelines = () => {
 
   return (
     <div className="bg-[#F8FAFC]">
-      <div className="w-11/12 lg:w-9/12 mx-auto py-10 lg:py-20">
-        <h2 className="font-bold text-3xl lg:text-5xl text-[#1F2937] mb-6">
+      <div className="w-11/12 md:w-10/12 lg:w-9/12 mx-auto py-10 md:py-14 lg:py-20">
+        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-[#1F2937] mb-6">
           Timeline
         </h2>
-        <div className="dropdown dropdown-start mb-6">
+        <div className="dropdown dropdown-start mb-6 sm:w-72">
           <div
             tabIndex={0}
             role="button"
-            className="shadow-sm flex justify-between items-center w-fll lg:w-86 rounded-lg p-3 lg:p-4 cursor-pointer"
+            className="shadow-sm flex justify-between items-center w-full lg:w-86 rounded-lg p-3 md:p-4 cursor-pointer"
           >
-            <span className="text-[#64748B] text-base lg:text-lg capitalize">
+            <span className="text-[#64748B] text-base md:text-lg capitalize">
               {filter === "all" ? "Filter timeline" : filter}
             </span>
             <IoIosArrowDown />
@@ -61,7 +61,7 @@ const Timelines = () => {
         </div>
 
         {filtered.length === 0 ? (
-          <p className="bg-[#FFFFFF] rounded-lg shadow-sm p-4 text-[#64748B] text-lg lg:text-2xl font-bold text-center">
+          <p className="bg-[#FFFFFF] rounded-lg shadow-sm p-4 text-[#64748B] text-lg lg:text-2xl font-bold text-center py-20">
             You did not performed any interactions yet.
           </p>
         ) : (

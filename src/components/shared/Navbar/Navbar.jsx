@@ -6,13 +6,13 @@ import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-[#FFFFFF] shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
         <div className="navbar-start">
           <img src={logo} alt="" />
         </div>
 
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end hidden lg:flex gap-2">
           <NavLink
             to={"/"}
             className={({ isActive }) =>
@@ -43,7 +43,7 @@ const Navbar = () => {
             <span className="font-semibold">Stats</span>
           </NavLink>
         </div>
-        <div className="dropdown dropdown-bottom dropdown-end md:hidden lg:hidden">
+        <div className="dropdown dropdown-bottom dropdown-end lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-[#FFFFFF] rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
               <NavLink to={"/"}>Home</NavLink>
