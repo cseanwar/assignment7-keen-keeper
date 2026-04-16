@@ -1,16 +1,50 @@
-# React + Vite
+# 🌿🌿🌿 Friendkeeper 🌿🌿🌿
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Stay close to the people who matter most.
 
-Currently, two official plugins are available:
+Friendkeeper is a personal relationship manager that helps you track and nurture your most meaningful friendships. Set goals for how often you want to connect, log interactions, and get reminded before you drift apart.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠 Technology Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** — UI with `use()`, context, and hooks
+- **React Router v7** — Client-side routing and data loading
+- **Tailwind CSS** — Utility-first styling
+- **DaisyUI** — Component library built on Tailwind
+- **Recharts** — Data visualization for friendship analytics
+- **React Toastify** — Toast notifications
+- **React Icons** — Icon library
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+### 1. Friend Profiles & Status Tracking
+Each friend has a dedicated detail page showing days since last contact, your relationship goal, next due date, and a status badge — **On Track**, **Almost Due**, or **Overdue** — so you always know who needs attention.
+
+### 2. Quick Check-In & Interaction Timeline
+Log a call, text, or video chat with a single tap. Every interaction is automatically timestamped and added to a filterable timeline so you have a full history of how you've been staying in touch.
+
+### 3. Friendship Analytics
+A live pi chart breaks down your interactions by type (call, text, video) and updates in real time as you log new check-ins — giving you a clear picture of how you're connecting with the people in your life.
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/cseanwar/assignment7-keen-keeper.git
+
+# Install dependencies
+cd assignment7-keen-keeper
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
