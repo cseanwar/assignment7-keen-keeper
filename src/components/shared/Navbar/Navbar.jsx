@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="navbar bg-[#FFFFFF] shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
         <div className="navbar-start">
-          <img src={logo} alt="" />
+          <img src={logo} alt="KeenKeeper logo" />
         </div>
 
         <div className="navbar-end hidden lg:flex gap-2">

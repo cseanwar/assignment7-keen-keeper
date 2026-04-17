@@ -103,7 +103,7 @@ const FriendDetails = () => {
               </p>
               <p className="text-sm lg:text-lg text-[#64748B]">Goal (days)</p>
             </div>
-            <div className="bg-[#FFFFFF] rounded-lg shadow-md p-6 lg:px-6 lg:py-8 flex flex-col gap-2 text-center col-span-2 lg:col-span-1">
+            <div className="bg-[#FFFFFF] rounded-lg shadow-md p-6 lg:px-5 lg:py-8 flex flex-col gap-2 text-center col-span-2 lg:col-span-1">
               <p className="text-xl lg:text-3xl font-semibold text-[#244D3F]">{nextDue}</p>
               <p className="text-sm lg:text-lg text-[#64748B]">Next due</p>
             </div>

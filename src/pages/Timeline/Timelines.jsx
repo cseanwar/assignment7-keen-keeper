@@ -13,7 +13,7 @@ const typeOfActions = {
 
 const Timelines = () => {
   const { interactions } = useContext(FriendContext);
-  console.log(interactions, "friendContext");
+  // console.log(interactions, "friendContext");
 
   const [filter, setFilter] = useState("all");
 
@@ -52,7 +52,7 @@ const Timelines = () => {
           >
             {["all", "call", "text", "video"].map((option) => (
               <li key={option}>
-                <a onClick={() => setFilter(option)} className="capitalize">
+                <a onClick={() => setFilter(option)}>
                   {option === "all" ? "All" : option}
                 </a>
               </li>
