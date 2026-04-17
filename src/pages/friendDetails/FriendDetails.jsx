@@ -69,7 +69,7 @@ const FriendDetails = () => {
               ))}
             </div>
             <p className="text-base text-[#64748B] italic mb-1">
-              "{expectedFriend.bio.slice(0, 60)}…"
+              "{expectedFriend.bio}"
             </p>
             <p className="text-sm text-[#64748B]">Preferred: email</p>
           </div>
