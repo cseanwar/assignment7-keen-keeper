@@ -5,6 +5,7 @@ import Timelines from "../pages/Timeline/Timelines";
 import Stats from "../pages/Stats/Stats";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import FriendDetails from "../pages/friendDetails/FriendDetails";
+import LoadingSpinner from "../components/ui/LoadingSpinner";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
         path: "/friendDetails/:id",
         element: <FriendDetails />,
         loader: () => fetch("/friends.json"),
+        HydrateFallback: LoadingSpinner,
       },
       {
         path: "/timeline",

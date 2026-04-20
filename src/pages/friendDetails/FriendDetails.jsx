@@ -71,7 +71,7 @@ const FriendDetails = () => {
             <p className="text-base text-[#64748B] italic mb-1">
               "{expectedFriend.bio}"
             </p>
-            <p className="text-sm text-[#64748B]">Preferred: email</p>
+            <p className="text-sm text-[#64748B]">Preferred email: <span className="underline cursor-pointer">{expectedFriend.email}</span></p>
           </div>
 
           <div className="flex justify-center items-center gap-2 py-3 rounded-sm border border-[#E9E9E9] bg-[#FFFFFF] cursor-pointer">

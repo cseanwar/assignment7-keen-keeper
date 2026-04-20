@@ -35,7 +35,22 @@ const Timelines = () => {
         <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-[#1F2937] mb-6">
           Timeline
         </h2>
-        <div className="dropdown dropdown-start mb-6 sm:w-72">
+
+        {/* Select options */}
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="select shadow-sm mb-6 text-[#64748B] w-full sm:w-72 bg-[#F8FAFC] border-none text-lg"
+        >
+          <option value="all">Filter Timeline</option>
+          <option value="call">Call</option>
+          <option value="text">Text</option>
+          <option value="video">Video</option>
+        </select>
+
+
+        {/* Dropdown options */}
+        {/* <div className="dropdown dropdown-start mb-6 sm:w-72">
           <div
             tabIndex={0}
             role="button"
@@ -58,7 +73,7 @@ const Timelines = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         {filtered.length === 0 ? (
           <p className="bg-[#FFFFFF] rounded-lg shadow-sm p-4 text-[#64748B] text-lg lg:text-2xl font-bold text-center py-20">
